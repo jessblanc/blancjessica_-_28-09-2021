@@ -1,0 +1,52 @@
+/// mixin for centering elements
+@mixin flex-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/// Mixin button classic
+@mixin button {
+    color: #fff;
+    padding: 0 20px;
+    border-radius: 20px;
+    opacity: 1;
+}
+/// Underlining of menu titles
+@mixin underline {
+    border-bottom: 3px solid $color-tertiary;
+    width: 50px;
+}
+/// Animation of hearts
+@mixin heart-animation {
+    @keyframes heart-apparition {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0.25;
+        }
+        50% {
+            opacity: 0.5; 
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    position: absolute;
+    color: transparent;
+    &:hover {
+        background: $color-gradient;
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: heart-apparition 0.8s ease-in-out; 
+    }
+}
+
+@mixin gradient-text {
+    color: transparent;
+    background: $color-gradient;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

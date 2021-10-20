@@ -1,0 +1,20 @@
+// bouton avec dégradé
+
+@mixin button {
+    background: $color-gradient;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: $font-text;
+    max-width: 200px;
+    padding: 0 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    opacity: 1;
+}
+@mixin button-hover {
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.8);
+        opacity: 0.7;
+        cursor: pointer;
+        transition: 300ms;
+}

@@ -1,0 +1,307 @@
+/// animations menu
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+            transform: rotate(360deg);
+    }
+}
+@keyframes slideMenu {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 4%;
+    }
+    50% {
+        width: 8%;
+    }
+    100% {
+        width: 12%;
+    }
+}
+///animation de l'apparence des cartes
+@keyframes opacity {
+    0% {
+        opacity: 0;
+        margin-top: 70px;
+    }
+    100% {
+        opacity: 1;
+        margin-top:20px;
+    }
+}
+/// Body margin
+body {
+    margin: 0px;
+}
+* a {
+    text-decoration: none;
+    color: #fff;
+}
+///section principale
+.main {    
+    @include flex-center;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    font-family: $font-text;
+}
+///Header
+.header {
+    & a {
+        color: #000;  
+    }
+    &__back-arrow {
+        font-size: 1.5em;
+        margin: 0 100px 0 10px;
+    }
+}
+///photo restaurant
+.image {
+    width: 100%;
+    height: 50vh;
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-top: -60px;      
+    }
+}
+/// section menu
+#menu {
+    @include flex-center;
+    width: 100%;
+    background-color: #faf9f9;
+}
+.menu {
+    margin-top: -150px;
+    width: 100%;
+    background-color: #faf9f9;
+    border-radius: 50px 50px 0 0;
+    padding: 20px 0px 50px 0px;
+    &__header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: $font-title;
+        font-size: 1.2em;
+    }
+}
+/// coeur à coté du titre de la page
+.hearth {
+    @include flex-center;
+    width: 30px;  
+    margin: 15px 30px;
+    font-size: 1.5em;    
+    cursor: pointer;    
+    &-empty {
+        color:#747171;
+        font-size: 1.4em;
+        cursor: pointer;
+        &:hover> .heart-full {
+            @include heart-animation
+        }
+    }
+}
+///menu card section
+.menu__grid {
+    font-family: $font-text;
+    &__title {
+        @include underline;
+        color: #747171;
+        font-weight: 100;
+        height: 30px;
+        margin-bottom: 20px;
+        margin-left: 5px;
+    }
+    &__container {
+        margin: 0 5px 50px 5px;
+    }
+}
+.menu__grid__card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer; 
+    margin-top: 20px; 
+    &:hover .check {     
+            @include flex-center;
+            animation: slideMenu 0.5s linear;
+            transform-origin: right;
+            margin-left: 20px;
+    }
+    &:hover .menu__card-price {
+        padding-right: 100px;
+        transition: 0.5s linear;
+    }
+    .check {
+        display: none;
+        position: absolute;
+        background-color: $color-tertiary;
+        height: 100%;
+        width: 12%;
+        padding: 0 15px;
+        right: 0px;
+        top: 0px;
+        border-radius: 0 20px 20px 0;
+        i {
+            font-size: 30px;
+            color: #fff;
+            transform: rotate(180deg);
+            animation: rotate 1s both;
+        }   
+    }
+}       
+.menu__card-dish {
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    & p {
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    &-title {
+        font-weight: bold;
+    }
+}
+.menu__card-price {
+        font-weight: bold;
+        padding-right: 10px;
+        
+    }
+.menu__card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+/// Bouton commande
+.menu__container__button {
+    @include flex-center;
+}
+.menu__button {
+    @include button;
+    padding: 20px 50px 20px 50px;
+    &:hover {
+        @include button-hover;
+    }
+}
+/// Animations des cartes de menu
+#card-1 {
+    animation: opacity 1.5s both 0.2s;
+}
+#card-2 {
+    animation: opacity 1.5s both 0.3s;
+}
+#card-3 {
+    animation: opacity 1.5s both 0.4s;
+}
+#card-4 {
+    animation: opacity 1.5s both 0.5s;
+}
+#card-5 {
+    animation: opacity 1.5s both 0.6s;
+}
+#card-6 {
+    animation: opacity 1.5s both 0.7s;
+}
+#card-7 {
+    animation: opacity 1.5s both 0.8s;
+}
+#card-8 {
+    animation: opacity 1.5s both 0.9s;
+}
+#card-9 {
+    animation: opacity 1.5s both 1s;
+}
+#card-10 {
+    animation: opacity 1.5s both 0.5s;
+}
+/// Media Queries for screen to 650px minimum
+@media screen and (min-width: 650px) {
+    .header__logo {
+       margin-left: 15%;
+    }
+    .menu__header {
+        font-size: 1.4em;
+    }
+    .pres__container {
+        padding: 20px 0;
+    }
+    .menu__grid__title {
+        width: 70%;
+        padding-bottom: 5vh;
+        text-align: center;
+        margin-top: 8vh;
+        font-size: 1.3em;
+    }
+    .menu__grid__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0;
+    }
+    .menu__grid__card {
+        width: 47%;
+        height: 15vh;
+        font-size: 1em;
+        margin: 0 10px 0 10px;
+    }
+    .menu__container__button {
+        margin-top: 40px;
+    }
+    .footer__bloc {
+        width: 100%;
+        &-links {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        }
+        &-link {
+            margin: 20px;
+        }
+    }
+}
+/// Media Queries for screen to 1250px minimum
+@media screen and (min-width: 1250px) {
+    .header__logo {
+        text-align: center;
+        margin: 0;
+    }
+    .menu__grid {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        &__container {
+            display:flex;
+            flex-flow: column wrap;
+            align-items: center;
+            width: 30%;
+            margin: 0 20px 20px 20px;
+        }
+        &__title {
+           text-align: center;   
+            font-size: 1.2em;
+        }
+        &__card {
+            width: 100%;
+            height: 100px;
+            font-size: 1.1em;
+            margin-top: 2vh;
+        }
+    }
+    .menu__button {
+        max-width: 500px;
+        font-size: 2em;
+    }
+}

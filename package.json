@@ -1,0 +1,19 @@
+{
+  "name": "blancjessica_3_28092021",
+  "version": "1.0.0",
+  "description": "projet 3 openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessblanc/blancjessica_3_28-09-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessblanc/blancjessica_3_28-09-2021/issues"
+  },
+  "homepage": "https://github.com/jessblanc/blancjessica_3_28-09-2021#readme"
+}

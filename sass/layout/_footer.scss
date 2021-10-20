@@ -1,0 +1,35 @@
+.footer {
+  width: 100%;
+  background-color: #353535;
+  display: flex;
+  font-family: $font-text;
+}
+  
+.footer__bloc {
+  padding: 20px 40px 40px 40px;
+  
+  &-logo {
+      font-size: 1.3em;
+      font-family: $font-title;
+      margin: 10px 0 20px 0;
+  }
+  &-links {       
+      font-size: 1em;
+      width: auto;
+      
+  }
+  &-link {
+      display: flex;
+      align-items: center;
+      width: auto;
+      height: 30px;
+      & i {
+          color: #fff;
+          padding-right: 10px;
+      }
+      & h3 {
+          font-weight: 300;
+          color: rgb(238, 236, 236) ;
+      }          
+  }
+}
