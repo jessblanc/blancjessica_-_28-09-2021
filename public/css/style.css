@@ -77,6 +77,70 @@ body {
     transformation: rotation(-360deg);
   }
 }
+.loader {
+  opacity: 0;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  animation: loader 3s forwards;
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.logo {
+  position: absolute;
+  justify-content: center;
+  top: 15%;
+  left: 10%;
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+  animation: anim 3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes anim {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+.text {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  opacity: 0;
+  animation: txt 4s ease forwards;
+}
+
+@keyframes txt {
+  0% {
+    fill: black;
+  }
+  50% {
+    fill: white;
+  }
+  100% {
+    fill: white;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   margin: 0;
 }
@@ -299,6 +363,19 @@ body {
 }
 
 @media screen and (min-width: 650px) {
+  .logo {
+    position: absolute;
+    justify-content: center;
+    top: 30%;
+    left: 28%;
+  }
+
+  .text {
+    position: absolute;
+    top: 70%;
+    left: 38%;
+  }
+
   .pres__container {
     padding: 0;
   }
@@ -341,6 +418,19 @@ body {
   }
 }
 @media screen and (min-width: 1250px) {
+  .logo {
+    position: absolute;
+    justify-content: center;
+    top: 30%;
+    left: 40%;
+  }
+
+  .text {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+  }
+
   .header {
     height: 120px;
   }
