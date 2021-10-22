@@ -1,19 +1,19 @@
 @keyframes rotation {
   0% {
-    transform: rotation(0deg);
-    visibilité: visible;
+    transform: rotate(0deg);
+    visibility: visible;
   }
   100% {
-    transform: rotation(360deg);
-    visibilité: cachée;
+    transform: rotate(360deg);
+    visibility: hidden;
   }
 }
 @keyframes spin-reverse {
   0% {
-    transform: rotation(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transformation: rotation(-360deg);
+    transform: rotate(-360deg);
   }
 }
 
